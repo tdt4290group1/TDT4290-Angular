@@ -1,0 +1,37 @@
+<div layout="column" style="height:100%;" ng-cloak>
+
+  <section layout="row" flex>
+
+    <md-sidenav
+        class="md-sidenav-left"
+        md-component-id="left"
+        md-is-locked-open="$mdMedia('gt-md')"
+        md-whiteframe="4">
+      <md-toolbar class="md-theme-indigo">
+        <h1 class="md-toolbar-tools">My account</h1>
+      </md-toolbar>
+      <md-content layout-padding>
+      <md-button ng-click="goToState('home.patients')" class="md-primary" style = "width:100%;right:8px !important;">
+        <i class = "fa fa-user"></i>
+          Patients
+      </md-button>
+      <md-button ng-click="goToState('home.plans')" class="md-primary" style = "width:100%;right:8px !important;">
+        <i class = "fa fa-calendar"></i>
+          Plans
+      </md-button>
+      <md-button ng-click="goToState('home.statistics')" class="md-primary" style = "width:100%;right:8px !important;">
+        <i class = "fa fa-bar-chart"></i>
+          Statistics
+      </md-button>
+      </md-content>
+    </md-sidenav>
+
+
+
+    <md-content flex layout-padding>
+      <div ui-view></div>
+    </md-content>
+
+  </section>
+
+</div>

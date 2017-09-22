@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html ng-app="MyApp">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Satellizer</title>
+  <link href="favicon.png" rel="shortcut icon">
+  <link href="//fonts.googleapis.com/css?family=Roboto|Montserrat:400,700|Open+Sans:400,300,600" rel="stylesheet">
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
+  <link href="//cdn.jsdelivr.net/animatecss/3.2.0/animate.css" rel="stylesheet">
+  <link href="/stylesheets/angular-toastr.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
+  <link href="/stylesheets/styles.css" rel="stylesheet">
+  <link rel="stylesheet" href="bower_components/nvd3/build/nv.d3.css">
+</head>
+<body>
+
+<md-toolbar ng-controller = "NavbarCtrl">
+  <div class="md-toolbar-tools">
+    <md-truncate style="position: absolute; left: 10px; right: 170px; top: 13px;">Meducate yourself</md-truncate>
+    <span flex></span>
+    <a ng-if = "isAuthenticated()" type = "button" class="md-raised" aria-label="Log out" href = "#/logout">
+      Log out
+    </a>
+  </div>
+</md-toolbar>
+
+<div id = "ui-view" ui-view></div>
+
+
+
+<!-- Third-party Libraries -->
+<script type="text/javascript">
+  var baseUrl = 'https://beta.kek.science';
+</script>
+<script src="/vendor/angular.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular-aria.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
+
+<script src="/vendor/angular-animate.js"></script>
+<script src="/vendor/angular-messages.js"></script>
+<script src="/vendor/angular-resource.js"></script>
+<script src="/vendor/angular-sanitize.js"></script>
+<script src="/vendor/angular-ui-router.js"></script>
+<script src="/vendor/angular-toastr.tpls.js"></script>
+<script src="/vendor/satellizer.js"></script>
+<script src="/bower_components/d3/d3.js"></script>
+<script src="/bower_components/nvd3/build/nv.d3.js"></script> <!-- or use another assembly -->
+<script src="/bower_components/angular-nvd3/dist/angular-nvd3.js"></script>
+
+<!-- Application Code -->
+<script src="/app.js"></script>
+<script src="/directives/passwordStrength.js"></script>
+<script src="/directives/passwordMatch.js"></script>
+<script src="/controllers/home.js"></script>
+<script src="/controllers/home/patients.js"></script>
+<script src="/controllers/home/plans.js"></script>
+<script src="/controllers/home/statistics.js"></script>
+
+
+<script src="/controllers/login.js"></script>
+<script src="/controllers/signup.js"></script>
+<script src="/controllers/logout.js"></script>
+<script src="/controllers/profile.js"></script>
+<script src="/controllers/navbar.js"></script>
+<script src="/controllers/sidebar.js"></script>
+<script src="/services/account.js"></script>
+</body>
+</html>
