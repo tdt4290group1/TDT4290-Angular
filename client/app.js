@@ -4,6 +4,10 @@ angular.module('MyApp', ['ngResource', 'ngMessages', 'ngAnimate', 'toastr', 'ui.
      * App routes
      */
 
+     $httpProvider.interceptors = [function(req, res) {
+       console.log(req, res);
+     }]
+
      var skipIfLoggedIn = ['$q', '$auth', function($q, $auth) {
        var deferred = $q.defer();
        if ($auth.isAuthenticated()) {
@@ -45,6 +49,14 @@ angular.module('MyApp', ['ngResource', 'ngMessages', 'ngAnimate', 'toastr', 'ui.
         url: 'plans',
         controller: 'PlansCtrl',
         templateUrl: 'partials/plans.html',
+        resolve: {
+          loginRequired: loginRequired
+        }
+      })
+      .state('home.plan_add', {
+        url: 'plan-add',
+        controller: 'AddPlanCtrl',
+        templateUrl: 'partials/plan/add.html',
         resolve: {
           loginRequired: loginRequired
         }

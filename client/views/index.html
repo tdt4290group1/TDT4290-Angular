@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Satellizer</title>
+  <title>RheumaTool</title>
   <link href="favicon.png" rel="shortcut icon">
   <link href="//fonts.googleapis.com/css?family=Roboto|Montserrat:400,700|Open+Sans:400,300,600" rel="stylesheet">
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
@@ -19,7 +19,7 @@
 
 <md-toolbar ng-controller = "NavbarCtrl">
   <div class="md-toolbar-tools">
-    <md-truncate style="position: absolute; left: 10px; right: 170px; top: 13px;">Meducate yourself</md-truncate>
+    <md-truncate style="position: absolute; left: 10px; right: 170px; top: 13px;">RheumaTool</md-truncate>
     <span flex></span>
     <a ng-if = "isAuthenticated()" type = "button" class="md-raised" aria-label="Log out" href = "#/logout">
       Log out
@@ -58,6 +58,7 @@
 <script src="/controllers/home.js"></script>
 <script src="/controllers/home/patients.js"></script>
 <script src="/controllers/home/plans.js"></script>
+<script src="/controllers/plan/add.js"></script>
 <script src="/controllers/home/statistics.js"></script>
 
 

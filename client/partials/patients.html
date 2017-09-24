@@ -20,29 +20,23 @@
             </td>
             <td>
               {{user.newName}}
-            </td>
             <td>
               {{user.plan}}
             </td>
             <td>
               <md-button ng-click="showPatient()" class="md-raised md-primary pull-right" style = "right:8px !important;">
                 <i class = "fa fa-edit"></i>
-                  Edit plan
+                  Edit
               </md-button>
               <md-button ng-click="savePatient()" class="md-raised md-primary pull-right" style = "right:8px !important;" ng-if = "user.newName != user.name">
                 <i class = "fa fa-save"></i>
-                  save
+                  Save
               </md-button>
 
             </td>
           </tr>
         </tbody>
       </table>
-    </div>
-    <div class = "row">
-        <div class = "col-sm-12">
-            <nvd3 id="pie" options='options' data='dataSet'></nvd3>
-        </div>
     </div>
   </div>
 </div>

@@ -1,0 +1,53 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <md-toolbar class="md-hue-5">
+        <div class="md-toolbar-tools">
+          <h2 flex md-truncate>Add new plan</h2>
+
+        </div>
+      </md-toolbar>
+      <div class = "row">
+          <div class = "col-sm-12">
+            <div class="row" style = "margin-left:10px;margin-top:10px;">
+              <div class="col-sm-12">
+                <h5>Plan title:</h5>
+                <md-input-container class="md-block" style = "margin-top:25px;">
+                  <label>Provide plan title</label>
+                  <input ng-model="data.title">
+                </md-input-container>
+                <h5>Plan description:</h5>
+                <md-input-container class="md-block" style = "margin-top:25px;">
+                  <label>Provide plan description </label>
+                  <input ng-model="data.comment">
+                </md-input-container>
+                <h5>Provide length (in weeks):</h5>
+                <md-input-container class="md-block" style = "margin-top:25px;">
+                  <label>Insert plan length here</label>
+                  <input ng-model="data.length" type = "number">
+                </md-input-container>
+              </div>
+            </div>
+              <div class="row" style = "margin-left:10px;margin-top:10px;">
+                <div class="col-sm-12">
+                  <h5>Dosage plan week <span style = "color:#3F51B5;">{{data.fromWeek}}</span> to <span style = "color:#3F51B5;">{{data.toWeek}}</span>:</h5>
+                  <md-button ng-click="next()" class="md-raised md-primary pull-right">
+                    <i class = "fa fa-arrow-right"></i>
+                      Next interval
+                  </md-button>
+                  <md-button ng-click="previous()" class="md-raised md-primary pull-right" ng-if = "data.fromWeek != 1">
+                    <i class = "fa fa-arrow-left"></i>
+                      Previous interval
+                  </md-button>
+                  <nvd3 id="pie" options='options' data='dataSet'></nvd3>
+                </div>
+              </div>
+              <md-button ng-click="addPlan()" class="md-raised md-primary pull-right">
+                <i class = "fa fa-plus"></i>
+                  Add plan
+              </md-button>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>

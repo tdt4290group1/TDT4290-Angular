@@ -1,7 +1,7 @@
 /**
  * Satellizer 0.15.5
- * (c) 2016 Sahat Yalkabov 
- * License: MIT 
+ * (c) 2016 Sahat Yalkabov
+ * License: MIT
  */
 
 (function (global, factory) {
@@ -19,7 +19,7 @@
             this.tokenName = 'token';
             this.tokenPrefix = 'satellizer';
             this.tokenHeader = 'Authorization';
-            this.tokenType = 'Bearer';
+            this.tokenType = 'Token';
             this.storageType = 'localStorage';
             this.tokenRoot = null;
             this.withCredentials = false;

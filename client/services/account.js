@@ -4,8 +4,11 @@ angular.module('MyApp')
       getProfile: function() {
         return $http.get(baseUrl + '/api/me');
       },
-      updateProfile: function(profileData) {
-        return $http.put(baseUrl + '/api/me', profileData);
+      addPlan: function(data) {
+        return $http.post(baseUrl + '/api/instructor/general-plan/', data);
+      },
+      getPlans: function() {
+        return $http.get(baseUrl + '/api/instructor/general-plan/');
       }
     };
   });
