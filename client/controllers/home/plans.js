@@ -11,10 +11,8 @@ angular.module('MyApp')
 
     function updatePlans() {
       Account.getPlans().success(function(result) {
-        console.log(result);
         $scope.data.plans = result;
       }).catch(function(err) {
-        console.log(err);
       });
     }
 

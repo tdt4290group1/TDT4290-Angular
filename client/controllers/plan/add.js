@@ -28,7 +28,6 @@ angular.module('MyApp')
       $scope.planLines[$scope.data.fromWeek] = $scope.dataSet[1].values;
       var dosages = getDosages();
       if (!dosages.valid) {
-        console.log(8);
         return;
       }
 
@@ -37,11 +36,9 @@ angular.module('MyApp')
         comment: $scope.data.comment,
         dosages: dosages.dosages
       }).success(function(result) {
-        console.log(result);
         $rootScope.$broadcast('updatePlans');
         $state.go('home.plans');
       }).catch(function(err) {
-        console.log(err);
         showPopup('Could not add plan!', 'All required fields not provided.', function() {});
       })
     }
@@ -79,7 +76,7 @@ angular.module('MyApp')
        }];
        if ($scope.data.length && $scope.data.fromWeek <= $scope.data.length && $scope.data.toWeek >= $scope.data.length) {
          dataSet.push({
-           key: 'plan end',
+           key: 'Plan end',
            color: '#FF0000',
            values: [{
              x: $scope.data.length,
@@ -119,7 +116,7 @@ angular.module('MyApp')
        }];
       if ($scope.data.length && $scope.data.fromWeek <= $scope.data.length && $scope.data.toWeek >= $scope.data.length) {
         dataSet.push({
-          key: 'plan end',
+          key: 'Plan end',
           color: '#FF0000',
           values: [{
             x: $scope.data.length,
